@@ -1,0 +1,11 @@
+version: "3"
+services:
+  elk:
+    image: sebp/elk           # pulls image from hub.docker.com
+    ports:                    # opens ports for communication
+      - "5601:5601"
+      - "5044:5044"
+      - "9200:9200"
+    volumes:                  # mounts data from local machine into container at boot
+      - "./data/threat-data.csv:/tmp/threat-data.csv"
+      - "./configs/logstash-threat.conf:/etc/logstash/conf.d/logstash-threat.conf"
