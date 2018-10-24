@@ -1,7 +1,7 @@
 version: "3"
 services:
   elk:
-    image: sebp/elk           # pulls image from hub.docker
+    image: sebp/elk           # pulls image from hub.docker.com
     ports:                    # opens ports for communication
       - "5601:5601"
       - "5044:5044"
